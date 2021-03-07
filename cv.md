@@ -5,7 +5,7 @@
 _Vilnius,_  
 **_e-mail:_** buzhor.danyl@gmail.com,
 
-**\*Discord:**
+**Discord:** Recomagnesius#2270
 
 ## ABOUT ME
 
