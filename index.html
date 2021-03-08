@@ -13,7 +13,9 @@
         <header class="title"><h1>My First CV</h1></header>
         <main>
             <h2>Buzhor Danil</h2>
-            <img style="float: left; margin: 0px 0px 0px 10px;" class="photo" src="img/photo.jpg" alt="It's me">
+            <figure>
+                <img style="float: left; margin: 0px 0px 0px 10px;" class="photo" src="img/photo.jpg" alt="It's me">
+            </figure>
             <section class="photoSoft">
                 <h4>Soft Skills</h4>
                 <p>
@@ -42,42 +44,42 @@
             <section class="code">
                 <h2>An example of my code</h2>
                 <p>An example of my solution to the tasks on codewars
-                    (<a href="https://www.codewars.com/kata/5715eaedb436cf5606000381" target="_blank">positiveSum</a>, 
-                <a href="https://www.codewars.com/kata/square-every-digit/"> Square Every Digit</a>)
+                    (<a href="https://www.codewars.com/kata/53573877d5493b4d6e00050c/train/javascript" target="_blank">Find the Capitals</a>, 
+                <a href="https://www.codewars.com/kata/square-every-digit/" target="_blank"> Square Every Digit</a>)
                 </p>
                 <div class="code-wrapper" style="display: flex;">
                     <code>
-                        function positiveSum(arr) {<br>
-                            &nbsp&nbsp&nbsp&nbsp    if (arr.length === 0) {<br>
-                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        return Number(arr) = [0, 0];<br>
-                                &nbsp&nbsp&nbsp&nbsp    }<br>
-                                &nbsp&nbsp&nbsp&nbsp    var neg = arr.filter(function(v) {<br>
-                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            return v &lt; 0;<br>
-                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        }),<br>
-                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        pos = arr.filter(function(v) {<br>
-                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            return v >= 0;<br>
-                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        }),<br>
-                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        arr = pos.concat();<br>
-                                        &nbsp&nbsp&nbsp&nbsp    let sum = 0;<br>
-                                        &nbsp&nbsp&nbsp&nbsp    for (let i = 0; i &lt; arr.length; ++i) {<br>
-                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        sum = sum + arr[i];<br>
-                                            &nbsp&nbsp&nbsp&nbsp    }<br>
-                                            &nbsp&nbsp&nbsp&nbsp    return sum;<br>
-                        }<br>
+                        function capital(capitals) {<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;let main;<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;let cap;<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;let result = [];<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;for (let i = 0; i &lt; capitals.length; i++) {<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;if (capitals[i]['country']) {<br>
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;main = capitals[i]['country'];<br>
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;cap = capitals[i]['capital'];<br>
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;result.push('The capital of ' + main + ' is ' + cap);<br>
+                                    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;} else {<br>
+                                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;main = capitals[i]['state'];<br>
+                                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;cap = capitals[i]['capital'];<br>
+                                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;result.push('The capital of ' + main + ' is ' + cap);<br>
+                                        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}<br>
+                                        &nbsp; &nbsp; &nbsp; &nbsp;}<br>
+                                        &nbsp; &nbsp; &nbsp; &nbsp;return result;<br>
+                        }
                     </code>
                     <code style="margin-left: 20px;">
                         function squareDigits(num) {<br>
-                            &nbsp&nbsp&nbsp&nbsplet result = num + '';<br>
-                            &nbsp&nbsp&nbsp&nbspresult = result.split('');<br>
-                            &nbsp&nbsp&nbsp&nbspresult = result.map(Number);<br>
-                            &nbsp&nbsp&nbsp&nbspfor (let i = 0; i != result.length; i++) {<br>
-                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    result[i] = Math.pow(result[i], 2);<br>
-                                &nbsp&nbsp&nbsp&nbsp}<br>
-                                &nbsp&nbsp&nbsp&nbspresult = result.join();<br>
-                                &nbsp&nbsp&nbsp&nbspresult = result.replace(/[\s.,%]/g, '');<br>
-                                &nbsp&nbsp&nbsp&nbspresult = Number(result);<br>
-                                &nbsp&nbsp&nbsp&nbspconsole.log(result);<br>
-                                &nbsp&nbsp&nbsp&nbspreturn result;<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; let result = num + '';<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;result = result.split('');<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;result = result.map(Number);<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp;for (let i = 0; i != result.length; i++) {<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;    result[i] = Math.pow(result[i], 2);<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp;}<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp;result = result.join();<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp;result = result.replace(/[\s.,%]/g, '');<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp;result = Number(result);<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp;console.log(result);<br>
+                                &nbsp; &nbsp; &nbsp; &nbsp;return result;<br>
                         }
                     </code>
                 </div>
@@ -94,11 +96,13 @@
         </main>
         <footer>
             <h3>Contact:</h3>
-                    <ul>
-                        <li>E-mail: <a href="malito:buzhor.danyl@gmail.com" target="_blank">buzhor.danyl@gmail.com</a></li>
-                        <li>Discrod: Recomagnesius#2270</li>
-                        <li>City: Vilnius</li>
-                    </ul>
+            <address>
+                <ul>
+                    <li>E-mail: <a href="malito:buzhor.danyl@gmail.com" target="_blank">buzhor.danyl@gmail.com</a></li>
+                    <li>Discrod: Recomagnesius#2270</li>
+                    <li>City: Vilnius</li>
+                </ul>
+            </address>
                 <a href="https://rs.school/index.html" target="_blank"><img class = "rs" src="img/rs_school.svg" alt="RSSCHOOL"></a>
         </footer>
     </div>
