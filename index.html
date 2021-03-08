@@ -5,67 +5,104 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>My CV</title>
+   <title>COPY</title>
    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-   <div class="container">
-      <header>
-         <h1>Buzhor Danil</h1>
-      </header>
-      
-      <article>
-         <div class="info">
-            <h2>CONTACT</h2>
-            <address>
-                    <span>Vilnius,</span> <br>
-                    <span>e-mail:</span> <span><a href="malito:buzhor.danyl@gmail.com"></a>buzhor.danyl@gmail.com</span>  <br> 
-                    <span>Discord:</span> <span>Recomagnesius#2270</span>
-                </address>
-         </div>
+    <div class="container">
+        <header class="title"><h1>My First CV</h1></header>
+        <main>
+            <h2>Buzhor Danil</h2>
+            <img style="float: left; margin: 0px 0px 0px 10px;" class="photo" src="img/photo.jpg" alt="It's me">
+            <section class="photoSoft">
+                <h4>Soft Skills</h4>
+                <p>
+                    Purposefulness<br>
+                    Curiosity<br>
+                    Ability to quickly learn new things<br>
+                    Ability to perceive a large amount of information<br>
+                    Ability to independently plan my working hours and follow this plan<br>
+                </p>
+            </section>
+            <section>
+                <h5>SKILLS</h5>
+                <ul>
+                    <li><abbr title="JavaScript">JS</abbr></li>
+                    <li><abbr title="HyperText Markup Language">HTML</abbr></li>
+                    <li><abbr title="Cascading Style Sheets">CSS</abbr></li>
+                    <li>Git</li>
+                </ul>
+            </section>
 
-         <div class="info">
-            <h2>ABOUT ME</h2>
-            <span>Hard working, responsible person.</span>
-         </div>
+            <section class="education">
+                <h6>EDUCATION</h6>
+                <p>Expected Secondary education</p>
+            </section>
 
-         <div class="info">
-            <h2>SKILL</h2>
-            <ul>
-               <li><abbr title="HyperText Markup Language">HTML</abbr></li>
-               <li><abbr title="Cascading Style Sheets">CSS</abbr></li>
-               <li><abbr title="JavaScript">JS</abbr></li>
-               <li>Git</li>
-            </ul>
-         </div>
-
-         <div class="info">
-            <del><h2>MY PROJECTS</h2></del>
-         </div>
-
-         <div class="info">
-            <h2>EDUCATION</h2>
-         </div>
-
-         <div class="info">
-            <del><h2>EXPERIENCE</h2></del>
-         </div>
-
-         <div class="info">
-            <h2>LANGUAGES</h2>
-            <ul>
-               <li>Russian</li>
-               <li>English</li>
-               <li>Ukranian</li>
-            </ul>
-         </div>
-
-      </article>
-      <footer>
-         <footer></footer>
-      </footer>
-   </div>
+            <section class="code">
+                <h2>An example of my code</h2>
+                <p>An example of my solution to the tasks on codewars
+                    (<a href="https://www.codewars.com/kata/5715eaedb436cf5606000381" target="_blank">positiveSum</a>, 
+                <a href="https://www.codewars.com/kata/square-every-digit/"> Square Every Digit</a>)
+                </p>
+                <div class="code-wrapper" style="display: flex;">
+                    <code>
+                        function positiveSum(arr) {<br>
+                            &nbsp&nbsp&nbsp&nbsp    if (arr.length === 0) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        return Number(arr) = [0, 0];<br>
+                                &nbsp&nbsp&nbsp&nbsp    }<br>
+                                &nbsp&nbsp&nbsp&nbsp    var neg = arr.filter(function(v) {<br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            return v &lt; 0;<br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        }),<br>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        pos = arr.filter(function(v) {<br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp            return v >= 0;<br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        }),<br>
+                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        arr = pos.concat();<br>
+                                        &nbsp&nbsp&nbsp&nbsp    let sum = 0;<br>
+                                        &nbsp&nbsp&nbsp&nbsp    for (let i = 0; i &lt; arr.length; ++i) {<br>
+                                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp        sum = sum + arr[i];<br>
+                                            &nbsp&nbsp&nbsp&nbsp    }<br>
+                                            &nbsp&nbsp&nbsp&nbsp    return sum;<br>
+                        }<br>
+                    </code>
+                    <code style="margin-left: 20px;">
+                        function squareDigits(num) {<br>
+                            &nbsp&nbsp&nbsp&nbsplet result = num + '';<br>
+                            &nbsp&nbsp&nbsp&nbspresult = result.split('');<br>
+                            &nbsp&nbsp&nbsp&nbspresult = result.map(Number);<br>
+                            &nbsp&nbsp&nbsp&nbspfor (let i = 0; i != result.length; i++) {<br>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    result[i] = Math.pow(result[i], 2);<br>
+                                &nbsp&nbsp&nbsp&nbsp}<br>
+                                &nbsp&nbsp&nbsp&nbspresult = result.join();<br>
+                                &nbsp&nbsp&nbsp&nbspresult = result.replace(/[\s.,%]/g, '');<br>
+                                &nbsp&nbsp&nbsp&nbspresult = Number(result);<br>
+                                &nbsp&nbsp&nbsp&nbspconsole.log(result);<br>
+                                &nbsp&nbsp&nbsp&nbspreturn result;<br>
+                        }
+                    </code>
+                </div>
+            </section>
+            <section>
+                <h2>LANGUAGES</h2>
+                <p style="padding-left: 50px;">I speak several languages:</p>
+                <ul>
+                    <li>English(A1)</li>
+                    <li>Ukranian</li>
+                    <li>Russian</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <h3>Contact:</h3>
+                    <ul>
+                        <li>E-mail: <a href="malito:buzhor.danyl@gmail.com" target="_blank">buzhor.danyl@gmail.com</a></li>
+                        <li>Discrod: Recomagnesius#2270</li>
+                        <li>City: Vilnius</li>
+                    </ul>
+                <a href="https://rs.school/index.html" target="_blank"><img class = "rs" src="img/rs_school.svg" alt="RSSCHOOL"></a>
+        </footer>
+    </div>
+    
 </body>
 
 </html>
